@@ -120,22 +120,17 @@ document.getElementById('date').innerHTML = today.toDateString();
 
 function clock() {
 var today = new Date();
-var hour = zeros(twelveHour(today.getHours()));
+var hour = zeros(today.getHours());
 var minutes = zeros(today.getMinutes());
 var seconds = zeros(today.getSeconds());
-if(today.getHours() >=12){
-    seconds+=" pm"
-}
-else{
-    seconds+=" am"
-}
+    
 hrs = today.getHours();
 if (hrs < 12)
-        greet = 'Good Morning  ';
+        greet = 'Guten Morgen  ';
     else if (hrs >= 12 && hrs <= 17)
-        greet = 'Good Afternoon ';
+        greet = 'Guten Nachmitag ';
     else if (hrs >= 17 && hrs <= 24)
-        greet = 'Good Evening  ';
+        greet = 'Guten Abend  ';
 // console.log(today.toLocaleTimeString());
 document.getElementById('greet').innerHTML = greet;
 document.getElementById('hour').innerHTML = hour;
